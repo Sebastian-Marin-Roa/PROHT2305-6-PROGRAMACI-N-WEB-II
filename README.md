@@ -4,8 +4,25 @@
 Este Proyecto incluye formularios para agregar hoteles, vuelos y reservas, asi como scripts para procesar estos formularios y mostrar resultados. Esta desarrollado utilizando HTML y PHP
 
 ## Estructura de archivos
-forms: hotel_form.html, vuelo_form.html, reserva_form.html
-proccesing: procesar_hotel.php, procesar_vuelo.php, procesar_reserva.php
+mi-proyecto/
+│
+├── forms/
+│ ├── hotel_form.html
+│ ├── vuelo_form.html
+│ └── reserva_form.html
+│
+├── processing/
+│ ├── procesar_hotel.php
+│ ├── procesar_vuelo.php
+│ └── procesar_reserva.php
+│
+├── views/
+│ ├── mostrar_hoteles.php
+│ ├── mostrar_reservas.php
+│ ├── mostrar_vuelos.php
+│ └── mostrar_resultado.html
+│
+└── database.php
 
 
 ## Instrucciones de Uso
