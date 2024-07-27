@@ -1,1 +1,17 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Hotel</title>
+</head>
+<body>
+    <h1>Agregar Hotel</h1>
+    <form action="procesar_hotel.php" method="POST">
+        Nombre: <input type="text" name="nombre" value="Hotel Central"><br>
+        Ubicación: <input type="text" name="ubicacion" value="Madrid"><br>
+        Habitaciones Disponibles: <input type="number" name="habitaciones_disponibles" value="50"><br>
+        Tarifa por Noche: <input type="number" step="0.01" name="tarifa_noche" value="120.00"><br>
+        <input type="submit" value="Agregar Hotel">
+    </form>
+</body>
+</html>
