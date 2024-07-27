@@ -4,8 +4,7 @@
 Este Proyecto incluye formularios para agregar hoteles, vuelos y reservas, asi como scripts para procesar estos formularios y mostrar resultados. Esta desarrollado utilizando HTML y PHP
 
 ## Estructura de archivos
-Forms/
-Hotel_from.html
+Forms/hotel_form.html, vuelo_form.html, reserva_form.html
 
 
 ## Instrucciones de Uso
