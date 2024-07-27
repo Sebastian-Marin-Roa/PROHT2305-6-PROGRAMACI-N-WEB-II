@@ -17,9 +17,5 @@ Este Proyecto incluye formularios para agregar hoteles, vuelos y reservas, asi c
 2.El archivo 'processing/procesar_hoteles.php' procesara la informacion y guardara los datos.
 3.Los resultados se mostraran en 'views/mostrar_hoteles.php.
 
-## Contribuir
-1.Crea una rama para tus cambios:
-git checkhout -b nombre-de-la-rama
-
 ## solo es una prueba muy simple  <3
 
