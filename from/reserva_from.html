@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Reserva</title>
+</head>
+<body>
+    <h1>Agregar Reserva</h1>
+    <form action="procesar_reserva.php" method="POST">
+        Cliente ID: <input type="number" name="id_cliente" required><br>
+        Fecha de Reserva: <input type="date" name="fecha_reserva" required><br>
+        
+        <!-- Selección de Vuelo -->
+        <label for="id_vuelo">Selecciona un Vuelo:</label>
+        <select name="id_vuelo" id="id_vuelo" required>
+            <?php
+            include 'database.php';
+
+            try {
+                $sql = "SELECT id_vuelo, origen, destino FROM VUELO";
+                $stmt = $conn->prepare($sql);
+                $stmt->execute();
+                $vuelos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                
+                foreach ($vuelos as $vuelo) {
+                    echo "<option value='{$vuelo['id_vuelo']}'>{$vuelo['origen']} - {$vuelo['destino']}</option>";
+                }
+            } catch(PDOException $e) {
+                echo "Error: " . $e->getMessage();
+            }
+            ?>
+        </select><br>
+        
+        <!-- Selección de Hotel -->
+        <label for="id_hotel">Selecciona un Hotel:</label>
+        <select name="id_hotel" id="id_hotel" required>
+            <?php
+            try {
+                $sql = "SELECT id_hotel, nombre, ubicacion FROM HOTEL";
+                $stmt = $conn->prepare($sql);
+                $stmt->execute();
+                $hoteles = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                
+                foreach ($hoteles as $hotel) {
+                    echo "<option value='{$hotel['id_hotel']}'>{$hotel['nombre']} - {$hotel['ubicacion']}</option>";
+                }
+            } catch(PDOException $e) {
+                echo "Error: " . $e->getMessage();
+            }
+            ?>
+        </select><br>
+        
+        <input type="submit" value="Agregar Reserva">
+    </form>
+</body>
+</html>
