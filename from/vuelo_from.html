@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Vuelo</title>
+</head>
+<body>
+    <h1>Agregar Vuelo</h1>
+    <form action="procesar_vuelo.php" method="POST">
+        Origen: <input type="text" name="origen" value="Madrid"><br>
+        Destino: <input type="text" name="destino" value="Barcelona"><br>
+        Fecha: <input type="date" name="fecha" value="2024-08-01"><br>
+        Plazas Disponibles: <input type="number" name="plazas_disponibles" value="150"><br>
+        Precio: <input type="number" step="0.01" name="precio" value="99.99"><br>
+        <input type="submit" value="Agregar Vuelo">
+    </form>
+</body>
+</html>
