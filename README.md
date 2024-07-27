@@ -21,4 +21,4 @@ Este Proyecto incluye formularios para agregar hoteles, vuelos y reservas, asi c
 1.Crea una rama para tus cambios:
 git checkhout -b nombre-de-la-rama
 
-## PD. solo es una prueba muy simple <3
+## solo es una prueba muy simple  <3
